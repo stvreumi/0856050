@@ -1,15 +1,11 @@
 language: java
-dist: bionic
+#dist: bionic
 jdk:
   - openjdk11
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get -y install ant
-  - echo $(ant -version)
-
-install:
-  - sudo bash ./build.sh
+  - junit_platform_version='1.6.1'
+  - curl --remote-name  "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${junit_platform_version}/junit-platform-console-standalone-${junit_platform_version}.jar"
 
 script:
-  - ant test -lib ${ANT_HOME}
+  - java -jar junit-platform-console-standalone-${junit_platform_version}.jar --scan-classpath=./
