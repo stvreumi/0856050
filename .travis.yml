@@ -3,13 +3,10 @@ dist: bionic
 jdk:
   - openjdk11
 
-before_install:
+install:
   - sudo apt-get update
   - sudo apt-get -y install ant
   - echo $(ant -version)
-
-install:
-  - ant deps
 
 before_script:
   - echo `ant --version`
