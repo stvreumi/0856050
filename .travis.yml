@@ -8,4 +8,4 @@ before_install:
   - curl --remote-name  "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${junit_platform_version}/junit-platform-console-standalone-${junit_platform_version}.jar"
 
 script:
-  - java -jar junit-platform-console-standalone-${junit_platform_version}.jar --scan-classpath=./
+  - java -jar junit-platform-console-standalone-${junit_platform_version}.jar ./
