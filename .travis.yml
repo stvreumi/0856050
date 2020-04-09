@@ -7,5 +7,9 @@ before_install:
   - junit_platform_version='1.6.1'
   - curl --remote-name  "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${junit_platform_version}/junit-platform-console-standalone-${junit_platform_version}.jar"
 
+before_script:
+  - mkdir test
+  - javac -d test -cp junit-platform-console-standalone-1.6.1.jar PriorityQueueTest.java
+
 script:
-  - java -jar junit-platform-console-standalone-${junit_platform_version}.jar ./
+  - java -jar junit-platform-console-standalone-${junit_platform_version}.jar -cp test --scan-classpath --fail-if-no-tests
