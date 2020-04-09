@@ -4,10 +4,12 @@ jdk:
   - openjdk11
 
 install: 
+  - apt-get update
+  - apt-get install ant
   - ant deps
 
 before_script:
-  - ant --version
+  - echo `ant --version`
 
 script:
   - ant test
