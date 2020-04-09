@@ -5,10 +5,10 @@ jdk:
 
 before_install:
   - sudo apt-get update
+  - sudo apt-get -y install ant
+  - echo $(ant -version)
 
 install:
-  - sudo apt-get install ant
-  - echo $(ant -version)
   - ant deps
 
 before_script:
