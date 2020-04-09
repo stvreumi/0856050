@@ -4,8 +4,8 @@ jdk:
   - openjdk11
 
 install: 
-  - apt-get update
-  - apt-get install ant
+  - sudo apt-get update
+  - sudo apt-get install ant
   - ant deps
 
 before_script:
