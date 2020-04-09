@@ -5,6 +5,7 @@ jdk:
 
 before_install:
   - junit_platform_version='1.6.1'
+  # https://github.com/junit-team/junit5-samples/blob/r5.6.1/junit5-jupiter-starter-ant/build.sh#L20
   - curl --remote-name  "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${junit_platform_version}/junit-platform-console-standalone-${junit_platform_version}.jar"
 
 before_script:
@@ -12,4 +13,6 @@ before_script:
   - javac -d test -cp junit-platform-console-standalone-1.6.1.jar PriorityQueueTest.java
 
 script:
+  # https://junit.org/junit5/docs/current/user-guide/#running-tests-console-launcher-options
+  # https://stackoverflow.com/a/52373592/13161466
   - java -jar junit-platform-console-standalone-${junit_platform_version}.jar -cp test --scan-classpath --fail-if-no-tests
