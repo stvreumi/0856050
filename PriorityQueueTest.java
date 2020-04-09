@@ -80,7 +80,7 @@ public class PriorityQueueTest {
             ),
             Arguments.arguments(
                 "char",
-                Arrays.asList('e', 'e', 's', 't', 'i', 'n', 'g'),
+                Arrays.asList('t', 'e', 's', 't', 'i', 'n', 'g'),
                 Arrays.asList('e', 'g', 'i', 'n', 's', 't', 't')
             )
         );
