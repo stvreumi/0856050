@@ -11,8 +11,5 @@ before_install:
 install:
   - sudo bash ./build.sh
 
-before_script:
-  - echo `ant --version`
-
 script:
-  - ant test
+  - ant test -lib ${ANT_HOME}
