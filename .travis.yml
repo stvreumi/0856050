@@ -9,7 +9,7 @@ before_install:
   - echo $(ant -version)
 
 install:
-  - ./build.sh
+  - sudo bash ./build.sh
 
 before_script:
   - echo `ant --version`
