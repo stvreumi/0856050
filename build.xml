@@ -1,6 +1,6 @@
-<!-- ref: https://github.com/junit-team/junit5-samples/blob/r5.6.1/junit5-jupiter-starter-ant/build.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="junit5-jupiter-starter-ant" default="build" basedir=".">
+<!-- ref: https://github.com/junit-team/junit5-samples/blob/r5.6.1/junit5-jupiter-starter-ant/build.xml -->
+<project name="0856050-lab4" default="build" basedir=".">
 
     <fail message="Ant 1.10.4+ is required!">
         <condition>
