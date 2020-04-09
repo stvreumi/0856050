@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/stvreumi/0856050.svg?branch=master)](https://travis-ci.org/stvreumi/0856050)
